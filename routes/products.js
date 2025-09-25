@@ -72,7 +72,26 @@ router.put('/:id', async function(req,res,next){
   // res.send({
   //   success: true,
   //   data:item
-  // })  
+  // })
+})
+
+router.delete('/:id', async function(req, res, next) {
+  try {
+    let deletedItem = await productModel.findByIdAndUpdate(
+      req.params.id,
+      { isDelete: true },
+      { new: true }
+    )
+    res.send({
+      success: true,
+      data: deletedItem
+    })
+  } catch (error) {
+    res.status(404).send({
+      success: false,
+      data: error
+    })
+  }
 })
 
 module.exports = router;

@@ -1,0 +1,4 @@
+- [x] Create schemas/category.js with name field
+- [x] Create routes/categories.js with CRUD operations
+- [x] Add delete route in routes/products.js to set isDelete to true
+- [x] Register categories route in app.js
