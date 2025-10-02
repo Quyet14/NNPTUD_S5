@@ -2,3 +2,8 @@
 - [x] Create routes/categories.js with CRUD operations
 - [x] Add delete route in routes/products.js to set isDelete to true
 - [x] Register categories route in app.js
+- [x] Create schemas/role.js and schemas/user.js with CRUD functions
+- [x] Create routes/roles.js and update routes/users.js with CRUD routes and status update
+- [x] Register roles route in app.js
+- [x] Commit changes
+- [ ] Push to github and submit link
