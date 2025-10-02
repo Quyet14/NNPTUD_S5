@@ -62,27 +62,28 @@ router.get('/name/:name', async function(req, res, next) {
   }
 });
 
-/* POST create role */
+/* POST create a new role */
 router.post('/', async function(req, res, next) {
   try {
-    const newRole = await createRole(req.body);
+    const roleData = req.body;
+    const role = await createRole(roleData);
     res.send({
       success: true,
-      data: newRole
+      data: role
     });
   } catch (error) {
-    res.status(400).send({
+    res.status(500).send({
       success: false,
       message: error.message
     });
   }
 });
 
-/* DELETE soft delete role */
+/* DELETE soft delete a role */
 router.delete('/:id', async function(req, res, next) {
   try {
-    const deletedRole = await softDeleteRole(req.params.id);
-    if (!deletedRole) {
+    const role = await softDeleteRole(req.params.id);
+    if (!role) {
       return res.status(404).send({
         success: false,
         message: 'Role not found'
@@ -90,7 +91,7 @@ router.delete('/:id', async function(req, res, next) {
     }
     res.send({
       success: true,
-      data: deletedRole
+      data: role
     });
   } catch (error) {
     res.status(500).send({

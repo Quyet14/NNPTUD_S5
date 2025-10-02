@@ -83,13 +83,13 @@ router.post('/', async function(req, res, next) {
 router.post('/update-status', async function(req, res, next) {
   try {
     const { email, username } = req.body;
-    const updatedUser = await updateUserStatus(email, username);
+    const user = await updateUserStatus(email, username);
     res.send({
       success: true,
-      data: updatedUser
+      data: user
     });
   } catch (error) {
-    res.status(400).send({
+    res.status(500).send({
       success: false,
       message: error.message
     });

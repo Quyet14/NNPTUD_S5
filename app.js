@@ -13,14 +13,13 @@ var rolesRouter = require('./routes/roles');
 var app = express();
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/nnptud-s5', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log('Connected to MongoDB');
-}).catch((err) => {
-  console.error('MongoDB connection error:', err);
-});
+mongoose.connect('mongodb://localhost:27017/nnptud-s5')
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch((err) => {
+    console.error('MongoDB connection error:', err);
+  });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

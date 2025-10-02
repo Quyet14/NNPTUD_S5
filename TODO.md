@@ -6,4 +6,5 @@
 - [x] Create routes/roles.js and update routes/users.js with CRUD routes and status update
 - [x] Register roles route in app.js
 - [x] Commit changes
-- [ ] Push to github and submit link
+- [x] Create branch and push
+- [ ] Create pull request
