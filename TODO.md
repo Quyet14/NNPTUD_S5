@@ -1,0 +1,7 @@
+- [x] Create schemas/product.js
+- [x] Create schemas/category.js
+- [x] Replace res.send in routes/users.js with Response
+- [x] Replace res.send in routes/roles.js with Response
+- [x] Create routes/product.js with CRUD and auth
+- [x] Create routes/category.js with CRUD and auth
+- [x] Update app.js to include product and category routes
